@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.gstatic.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"><link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <title>Вхід</title>
+    <title>Регістрація</title>
 </head>
 <body>
     
@@ -20,7 +20,7 @@
             <div class="buttons">
                 <a href="login.html" class="btn">Увійти</a>
                 <div class="line"></div>
-                <a href="register.html" class="btn">Зареєструватись</a>
+                <a href="login.html" class="btn">Зареєструватись</a>
             </div>
         </div>
         </div>
@@ -28,21 +28,35 @@
         <main>
             <div class="container">
                 <div class="main-container">
-                    <div class="login-block">
+                    <div class="register-block">
                         <div class="title">
-                            
-                        <h2>Вхід до блоку</h2>
+                        <h2>Реєстрація</h2>
                         </div>
-                        <div class="login-content">
+                        <div class="register-content">
                             <div class="input-block">
-                                <p>Користувач</p>
+                                <p>Призвіще</p>
                                 <input type="text">
+                            </div>
+                            <div class="input-block">
+                                <p>Ім'я</p>
+                                <input type="text">
+                            </div>
+                            <div class="input-block">
+                                <p>Навчальна група</p>
+                                <select>
+                                    <option>281</option>
+                                    <option>282</option>
+                                  </select>
                             </div>
                             <div class="input-block">
                                 <p>Пароль</p>
                                 <input type="password">
                             </div>
-                            <button>Увійти</button>
+                            <div class="input-block">
+                                <p>Підтвердження паролю</p>
+                                <input type="password">
+                            </div>
+                            <button>Зареєструватись</button>
                         </div>
                     </div>
                 </div>

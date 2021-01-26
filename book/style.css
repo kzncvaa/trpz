@@ -5,6 +5,7 @@
 .wrapper{
     display: flex;
     flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
 }
 .container{
     width: 80%;
@@ -90,4 +91,8 @@ ul{
 li{
     margin: 4px 0;
     font-weight: 700;
+}
+.logo{
+    text-decoration: none;
+    color: white;
 }
