@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <title>Git</title>
+</head>
+<body>
+    
+    <div class="wrapper">
+        <header>
+            <div class="container">
+                <div class="header">
+            <a href="..\index.html" class="logo">
+                <h1 class="name">My Blog</h1>
+                <div class="pib">KZNCVAA</div>
+            </a>
+            <div class="buttons">
+                <a href="..\login\login.html" class="btn">Увійти</a>
+                <div class="line"></div>
+                <a href="..\login\register.html" class="btn">Зареєструватись</a>
+            </div>
+        </div>
+        </div>
+        </header>
+        <main>
+            <div class="container">
+                <div class="main-container">
+                    <div class="block">
+                        <h2>Установка</h2>
+                        <p class="subtitle">Установить git на свою машину</p>
+                        <p><p class="code">sudo apt-get install git</p></p>
+                        <p><p class="code">brew install git</p></p>
+                    </div>
+                    <div class="block">
+                        <h2>Настройка</h2>
+                        <p class="subtutle">Есть довольно много опций, с которыми можно играть, но мы настроим самые важные: наше имя пользователя и адрес электронной почты.</p>
+                        <p><p class="code">git config --global user.name "My Name"</p></p>
+                        <p><p class="code">git config --global user.email myEmail@example.com
+                        </p></p>
+                    </div>
+                    
+                    <div class="block">
+                        <h2>Создание нового репозитория</h2>
+                        <p class="subtitle">Как мы отметили ранее, git хранит свои файлы и историю прямо в папке проекта. Чтобы создать новый репозиторий, нам нужно открыть терминал, зайти в папку нашего проекта и выполнить команду init. Это включит приложение в этой конкретной папке и создаст скрытую директорию .git, где будет храниться история репозитория и настройки.</p>
+                        <p><p class="code">$ mkdir Desktop/git_exercise/</p></p>
+                        <p><p class="code">$ cd Desktop/git_exercise/</p></p>
+                        <p><p class="code">$ git init</p></p>
+                    </div>
+                    <div class="block">
+                        <h2>Определение состояния</h2>
+                        <p class="subtitle">status — это еще одна важнейшая команда, которая показывает информацию о текущем состоянии репозитория: актуальна ли информация на нём, нет ли чего-то нового, что поменялось, и так далее</p>
+                        <p><p class="code">git status</p></p>
+                    </div>
+                    <div class="block">
+                        <h2>Подготовка файлов</h2>
+                        <p class="subtitle">В git есть концепция области подготовленных файлов. Можно представить ее как холст, на который наносят изменения, которые нужны в коммите. Сперва он пустой, но затем мы добавляем на него файлы (или части файлов, или даже одиночные строчки) командой add и, наконец, коммитим все нужное в репозиторий (создаем слепок нужного нам состояния) командой commit.</p>
+                        <p><p class="code">$ git add hello.txt</p></p>
+                        <p><p class="code">$ git add -A</p></p>
+                    </div>
+                    <div class="block">
+                        <h2>Коммит(фиксация изменений)
+                        </h2>
+                        <p class="subtitle">Коммит представляет собой состояние репозитория в определенный момент времени. Это похоже на снапшот, к которому мы можем вернуться и увидеть состояние объектов на определенный момент времени.</p>
+                        <p><p class="code">$ git commit -m "Initial commit."</p></p>
+                        <p><p class="code">brew install git</p></p>
+                    </div>
+                    <div class="block">
+                        <h2>Удаленные репозитории</h2>
+                        <p class="subtitle">Сейчас наш коммит является локальным — существует только в директории .git на нашей файловой системе. Несмотря на то, что сам по себе локальный репозиторий полезен, в большинстве случаев мы хотим поделиться нашей работой или доставить код на сервер, где он будет выполняться.</p>
+                        <p><p class="code">$ git remote add origin https://github.com/tutorialzine/awesome-project.git</p>Подключение к удаленному репозиторию</p>
+                        <p><p class="code">$ git push origin master</p> Отправка изменений на сервер
+                    </p>
+                    <p><p class="code">$ git clone https://github.com/tutorialzine/awesome-project.git</p> Клонирование репозитория</p>
+                    <p><p class="code">$ git pull origin master</p> Запрос изменений с сервера</p>
+                    </div>
+                    <div class="block">
+                        <h2>Ветвление</h2>
+                        <p class="subtitle">Во время разработки новой функциональности считается хорошей практикой работать с копией оригинального проекта, которую называют веткой. Ветви имеют свою собственную историю и изолированные друг от друга изменения до тех пор, пока вы не решаете слить изменения вместе</p>
+                        <p><p class="code">$ git branch amazing_new_feature</p>Создание новой ветки</p>
+                        <p><p class="code">$ git checkout amazing_new_feature</p>Переключение между ветками</p>
+                        <p><p class="code">$ git add feature.txt</p>Слияние веток</p>
+                        <p><p class="code">$ git commit -m "New feature complete.”</p></p>
+                        <p><p class="code">$ git checkout master</p></p>
+                        <p><p class="code">$ git merge amazing_new_feature</p></p>
+                        <p><p class="code">$ git branch -d awesome_new_feature</p></p>
+                    </div>
+                    <div class="block">
+                        <h2>Отслеживание изменений, сделанных в коммитах</h2>
+                        <p class="subtitle"></p>
+                        <p><p class="code">$ git log</p></p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="container">
+                <div class="footer">
+                    <p>Всі права захищені.</p>
+                    <p>KZNCVAA</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
