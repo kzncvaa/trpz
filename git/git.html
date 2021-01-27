@@ -76,6 +76,17 @@
                     <p><p class="code">$ git clone https://github.com/tutorialzine/awesome-project.git</p> Клонирование репозитория</p>
                     <p><p class="code">$ git pull origin master</p> Запрос изменений с сервера</p>
                     </div>
+                    <div class="block">
+                        <h2>Ветвление</h2>
+                        <p class="subtitle">Во время разработки новой функциональности считается хорошей практикой работать с копией оригинального проекта, которую называют веткой. Ветви имеют свою собственную историю и изолированные друг от друга изменения до тех пор, пока вы не решаете слить изменения вместе</p>
+                        <p><p class="code">$ git branch amazing_new_feature</p>Создание новой ветки</p>
+                        <p><p class="code">$ git checkout amazing_new_feature</p>Переключение между ветками</p>
+                        <p><p class="code">$ git add feature.txt</p>Слияние веток</p>
+                        <p><p class="code">$ git commit -m "New feature complete.”</p></p>
+                        <p><p class="code">$ git checkout master</p></p>
+                        <p><p class="code">$ git merge amazing_new_feature</p></p>
+                        <p><p class="code">$ git branch -d awesome_new_feature</p></p>
+                    </div>
                 </div>
             </div>
         </main>
