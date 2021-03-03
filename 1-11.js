@@ -1,5 +1,6 @@
 //1
 {
+    console.log('task 1:');
     function seconds(total) {
         return total%60;
     }
@@ -7,6 +8,7 @@
 }
 //2
 {
+    console.log('task 2:');
     function perimeter(side, count){
         return side*count;
     }
@@ -14,6 +16,7 @@
 }
 //3
 {
+    console.log('task 3:');
     function task3(n){
     for (let i = 1; i < n; i++) {
         if(i%3==0){
@@ -34,12 +37,14 @@ task3(10);
 }
 //4
 {
+    console.log('task 4:');
     function calculate(a=0, b=0, c=0){
         return (a+b+c)/3;
     };
     console.log(calculate(4,5,3));
 }
 //5
+console.log('task 5:');
 function isDivisible(n,x,y){
     let bool = false;
     if(n%x==0&& n%y==0){
@@ -57,58 +62,67 @@ function isDivisible(n,x,y){
 console.log(isDivisible(3,4,5));
 //6
 {
-    function getRandomInt(max) {
-    return Math.floor(Math.random() * Math.floor(max));
-  }
-  
-    let mas = [getRandomInt(10)];
-    for (let i = 0; i < mas.length; i++) {
-        mas[i] = getRandomInt(10);
+    console.log('task 6:');
+    function task6(elementsCount){
+    function random(min, max) {
+        return Math.round(min + Math.random() * (max - min));
     }
-    let temp;
-    let sum =0;
-    for (let i = 0; i < mas.length; i++) {
-        sum+=mas[i];
-        for (let j = 1; j < mas.length-1; j++) {
-            if(mas[i]<mas[j]){
-                temp = mas[i];
-                mas[i]=mas[j];
-                mas[j]=temp;
-            }
+    let arrodd = [];
+    let arr = [];
+    for (let i = 0; i < elementsCount; i++) {
+        arr.push(random(1,100));
+    }
+    console.log(arr);
+    let maxValue = 0;
+    let minValue = 1000;
+    let elementsSum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > maxValue) {
+            maxValue = arr[i];
         }
-    }
-    console.log(`max - ${mas[0]}`);
-    console.log(`min - ${mas[mas.length-1]}`);
-    console.log(`sum - ${sum}`);
-    console.log(`arifm - ${sum/mas.length-1}`);
-    console.log('odd numbers:');
-    for (let i = 0; i < mas.length-1; i++) {
-        if(mas[i]%2==0){
-            console.log(mas[i]);
+        if (arr[i] < minValue) {
+            minValue = arr[i];
         }
+        if (arr[i] % 2 == 1) {
+            arrodd.push(arr[i]);
+        }
+        elementsSum += arr[i];
     }
+    console.log("max " + maxValue);
+    console.log("min " + minValue);
+    console.log("sum " + elementsSum);
+    console.log("average " + elementsSum / arr.length);
+    console.log("odd " + arrodd);
+}
+task6(10);
 }
 //7
 {
-    function randomInteger(min, max) {
-        // получить случайное число от (min-0.5) до (max+0.5)
-        let rand = min - 0.5 + Math.random() * (max - min + 1);
-        return Math.round(rand);
-      }
-      
-
-    var n = 5, m = 5;
-    var mas = [];
-    for (var i = 0; i < m; i++){
-        mas[i] = [];
-        for (var j = 0; j < n; j++){
-            mas[i][j] = getRandomInt(-10, 30);
-    }}
-    console.log(mas);
-
+    console.log('task 7:');
+    function task7() {
+        let arr = [[],[],[],[],[]];
+        for (let i = 0; i < 5; i++) {
+            for (let j = 0; j < 5; j++) {
+                arr[i][j] = Math.round(-50 + Math.random() * (100));
+            }
+        }
+        console.log(arr);
+            let mas = arr.slice();
+            for (let i = 0; i < 5; i++) {
+                if (mas[i][i] < 0) {
+                    mas[i][i] = 0;
+                }
+                if (mas[i][i] > 0) {
+                    mas[i][i] = 1;
+                }
+            }
+            console.log(mas);
+    }
+    task7();
 }
 //8
 {
+    console.log('task 8:');
     function Add(a,b){
         console.log(a+b);
     }
@@ -128,6 +142,7 @@ console.log(isDivisible(3,4,5));
 }
 //9
 {
+    console.log('task 9:');
     function isPrime(num) {
         if (num <= 1) return false; // negatives
         if (num % 2 == 0 && num > 2) return false; // even numbers
@@ -156,6 +171,7 @@ console.log(isDivisible(3,4,5));
 }
 //10
 {
+    console.log('task 10:');
     function task10(mas){
         mas.reverse();
         for (let i = 0; i < mas.length; i++) {
